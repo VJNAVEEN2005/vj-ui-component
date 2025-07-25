@@ -3,26 +3,27 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Navbar} from 'vj-ui-components'
-import { IconHome2, IconSettings2, IconBook, IconComponents, IconDownload, IconCode, IconPalette } from '@tabler/icons-react'
+import { IconHome2, IconSettings2, IconBook, IconComponents, IconDownload, IconCode, IconPalette, IconSearch } from '@tabler/icons-react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Documentation from './pages/Documentation'
 import NavbarDocs from './pages/NavbarDocs'
 import InputDocs from './pages/InputDocs'
+import SearchDocs from './pages/SearchDocs'
 import Installation from './pages/Installation'
 import Examples from './pages/Examples'
 import Settings from './pages/Settings'
 
 function App() {
-  // Theme state management
+  // Theme state management with proper contrast
   const [theme, setTheme] = useState({
     primaryColor: "#6366f1",
     secondaryColor: "#4f46e5",
-    iconColor: "#e2e8f0",
-    textColor: "#f1f5f9",
+    iconColor: "#64748b",
+    textColor: "#1e293b",
     backgroundColor: "#f8fafc",
-    navbarIconColor: "#e2e8f0",
-    navbarTextColor: "#f1f5f9"
+    navbarIconColor: "#64748b",
+    navbarTextColor: "#1e293b"
   });
 
   // Load theme from localStorage on component mount
@@ -106,6 +107,11 @@ function App() {
           icon: <IconPalette />,
           text: "Input",
           path: "/docs/input"
+        },
+        {
+          icon: <IconSearch />,
+          text: "Search",
+          path: "/docs/search"
         }
       ]
     },
@@ -147,6 +153,7 @@ function App() {
         <Route path="/docs" element={<Documentation theme={theme} />} />
         <Route path="/docs/navbar" element={<NavbarDocs theme={theme} />} />
         <Route path="/docs/input" element={<InputDocs theme={theme} />} />
+        <Route path="/docs/search" element={<SearchDocs theme={theme} />} />
         <Route path="/installation" element={<Installation theme={theme} />} />
         <Route path="/examples" element={<Examples theme={theme} />} />
         <Route path="/settings" element={
