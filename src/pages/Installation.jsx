@@ -136,7 +136,7 @@ function App() {
             <code className="text-lg">npm install vj-ui-components</code>
             <button
               onClick={() => copyToClipboard('npm install vj-ui-components')}
-              className="ml-4 p-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg transition-colors"
+              className="ml-4 p-2 cursor-pointer bg-black bg-opacity-20 hover:bg-opacity-30 rounded-lg transition-colors"
             >
               <IconCopy size={16} />
             </button>
@@ -302,23 +302,8 @@ function App() {
           </div>
         </div>
 
-        {/* Next Steps */}
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">🎉 Installation Complete!</h2>
-          <p className="text-gray-600 mb-6">
-            You're all set! Now you can start building beautiful user interfaces with VJ UI Components.
-          </p>
-          <div className="flex justify-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition-colors">
-              <IconBook size={20} />
-              View Navbar Docs
-            </button>
-            <button className="bg-white border border-blue-300 hover:border-blue-400 text-blue-700 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition-colors">
-              <IconCode size={20} />
-              View Input Docs
-            </button>
-          </div>
-        </div>
+       
+        
       </div>
     </div>
   );

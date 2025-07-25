@@ -80,7 +80,9 @@ const Home = ({ theme }) => {
           </p>
           
           <div className="flex justify-center gap-6 mb-12">
-            <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center gap-3 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button
+            onClick={() => window.location.href = 'https://www.npmjs.com/package/vj-ui-components'}
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center gap-3 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
               <IconDownload size={24} />
               Get Started
             </button>

@@ -22,7 +22,7 @@ function App() {
     textColor: "#f1f5f9",
     backgroundColor: "#f8fafc",
     navbarIconColor: "#e2e8f0",
-    navbarTextColor: "#111827"
+    navbarTextColor: "#f1f5f9"
   });
 
   // Load theme from localStorage on component mount
