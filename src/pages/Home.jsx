@@ -102,7 +102,7 @@ const Home = ({ theme }) => {
           {stats.map((stat, index) => (
             <div key={index} className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 shadow-lg">
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-              <div className="font-medium" style={{ color: secondaryTextColor }}>{stat.label}</div>
+              <div className="font-medium" >{stat.label}</div>
             </div>
           ))}
         </div>
@@ -123,10 +123,10 @@ const Home = ({ theme }) => {
                   <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white">
                     {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-bold" style={{ color: primaryTextColor }}>{feature.title}</h3>
+                  <h3 className="text-2xl font-bold" >{feature.title}</h3>
                 </div>
-                
-                <p className="mb-6 text-lg leading-relaxed" style={{ color: secondaryTextColor }}>
+
+                <p className="mb-6 text-lg leading-relaxed">
                   {feature.description}
                 </p>
                 
@@ -134,7 +134,7 @@ const Home = ({ theme }) => {
                   {feature.highlights.map((highlight, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <IconCheck size={20} className="text-green-500" />
-                      <span className="font-medium" style={{ color: tertiaryTextColor }}>{highlight}</span>
+                      <span className="font-medium">{highlight}</span>
                     </div>
                   ))}
                 </div>
@@ -159,48 +159,48 @@ const Home = ({ theme }) => {
               <div className="p-4 bg-blue-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconRocket size={32} className="text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: primaryTextColor }}>Performance Optimized</h3>
-              <p style={{ color: secondaryTextColor }}>Lightweight and optimized for production with minimal bundle impact.</p>
+              <h3 className="text-xl font-semibold mb-3">Performance Optimized</h3>
+              <p>Lightweight and optimized for production with minimal bundle impact.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-green-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconCode size={32} className="text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: primaryTextColor }}>TypeScript Ready</h3>
-              <p style={{ color: secondaryTextColor }}>Full TypeScript support with comprehensive type definitions included.</p>
+              <h3 className="text-xl font-semibold mb-3">TypeScript Ready</h3>
+              <p>Full TypeScript support with comprehensive type definitions included.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-purple-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconSettings size={32} className="text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: primaryTextColor }}>Highly Customizable</h3>
-              <p style={{ color: secondaryTextColor }}>Extensive theming options and props for complete customization control.</p>
+              <h3 className="text-xl font-semibold mb-3">Highly Customizable</h3>
+              <p>Extensive theming options and props for complete customization control.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-orange-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconPalette size={32} className="text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: primaryTextColor }}>Modern Design</h3>
-              <p style={{ color: secondaryTextColor }}>Beautiful glassmorphism effects and modern design patterns.</p>
+              <h3 className="text-xl font-semibold mb-3">Modern Design</h3>
+              <p>Beautiful glassmorphism effects and modern design patterns.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-red-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconCheck size={32} className="text-red-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: primaryTextColor }}>Production Ready</h3>
-              <p style={{ color: secondaryTextColor }}>Battle-tested components ready for production applications.</p>
+              <h3 className="text-xl font-semibold mb-3">Production Ready</h3>
+              <p>Battle-tested components ready for production applications.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-indigo-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconStar size={32} className="text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: primaryTextColor }}>Developer Experience</h3>
-              <p style={{ color: secondaryTextColor }}>Intuitive APIs and comprehensive documentation for smooth development.</p>
+              <h3 className="text-xl font-semibold mb-3">Developer Experience</h3>
+              <p>Intuitive APIs and comprehensive documentation for smooth development.</p>
             </div>
           </div>
         </div>

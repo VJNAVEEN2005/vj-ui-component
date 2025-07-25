@@ -492,8 +492,8 @@ export default AdvancedForm;`;
               <IconCode size={48} className="text-white" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Live Examples</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4" style={{ color: theme?.textColor || '#111827' }}>Live Examples</h1>
+          <p className="text-xl" style={{ color: theme?.textColor || '#111827' }}>
             Explore real-world examples and see VJ UI Components in action. 
             Copy the code and customize it for your own projects.
           </p>
@@ -667,7 +667,7 @@ export default AdvancedForm;`;
 
         {/* Features Showcase */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Capabilities</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: theme?.textColor || '#111827' }}>Featured Capabilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-sm text-center">
               <div className="p-3 bg-blue-100 rounded-lg w-fit mx-auto mb-4">

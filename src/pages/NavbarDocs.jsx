@@ -156,15 +156,15 @@ return (
               <IconNavigation size={32} className="text-blue-600" />
             </div>
             <div>
-              <h1 className="text-4xl font-bold text-gray-900">Navbar Component</h1>
-              <p className="text-gray-600">Versatile navigation with dual layout support</p>
+              <h1 className="text-4xl font-bold " style={{ color: theme?.textColor || '#111827' }}>Navbar Component</h1>
+              <p style={{ color: theme?.iconColor || '#111827' }}>Versatile navigation with dual layout support</p>
             </div>
           </div>
         </div>
 
         {/* Features Grid */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Features</h2>
+          <h2 className="text-2xl font-bold  mb-6" style={{ color: theme?.textColor || '#111827' }}>Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <div key={index} className="p-6 bg-white rounded-xl shadow-sm">
@@ -178,8 +178,8 @@ return (
 
         {/* Usage Examples */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Usage Examples</h2>
-          
+          <h2 className="text-2xl font-bold mb-6" style={{ color: theme?.textColor || '#111827' }}>Usage Examples</h2>
+
           <div className="mb-6">
             <div className="flex space-x-1 mb-4">
               <button
@@ -246,7 +246,7 @@ return (
 
         {/* NavItem Interface */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">NavItem Interface</h2>
+          <h2 className="text-2xl font-bold mb-6" style={{ color: theme?.textColor || '#111827' }}>NavItem Interface</h2>
           <div className="bg-gray-900 rounded-lg overflow-hidden">
             <div className="flex justify-between items-center p-4 border-b border-gray-700">
               <span className="text-gray-300 font-medium">TypeScript Interface</span>
@@ -276,7 +276,7 @@ return (
 
         {/* Props Table */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Props</h2>
+          <h2 className="text-2xl font-bold mb-6" style={{ color: theme?.textColor || '#111827' }}>Props</h2>
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -319,7 +319,7 @@ return (
 
         {/* Live Preview Section */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Live Preview</h2>
+          <h2 className="text-2xl font-bold mb-6" style={{ color: theme?.textColor || '#111827' }}>Live Preview</h2>
           <div className="bg-white rounded-lg shadow-sm p-6">
             <div className="mb-4">
               <p className="text-gray-600 mb-4">
@@ -343,7 +343,7 @@ return (
 
         {/* Best Practices */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Best Practices</h2>
+          <h2 className="text-2xl font-bold mb-6" style={{ color: theme?.textColor || '#111827' }}>Best Practices</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-green-800 mb-3">✅ Do</h3>

@@ -122,8 +122,8 @@ function App() {
               <IconDownload size={48} className="text-white" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Installation Guide</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4" style={{ color: theme?.textColor || '#111827' }}>Installation Guide</h1>
+          <p className="text-xl" style={{ color: theme?.textColor || '#111827' }}>
             Get started with VJ UI Components in your React application. 
             Follow these simple steps to install and configure the library.
           </p>
@@ -148,8 +148,8 @@ function App() {
 
         {/* Installation Steps */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Installation Steps</h2>
-          
+          <h2 className="text-3xl font-bold mb-8" style={{ color: theme?.textColor || '#111827' }}>Installation Steps</h2>
+
           <div className="space-y-6">
             {installationSteps.map((step, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
@@ -197,7 +197,7 @@ function App() {
 
         {/* Requirements */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Requirements</h2>
+          <h2 className="text-3xl font-bold mb-8" style={{ color: theme?.textColor || '#111827' }}>Requirements</h2>
           <div className="bg-white rounded-xl shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -245,7 +245,7 @@ function App() {
 
         {/* Package.json Example */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Package.json Example</h2>
+          <h2 className="text-3xl font-bold mb-6" style={{ color: theme?.textColor || '#111827' }}>Package.json Example</h2>
           <div className="bg-gray-900 rounded-lg overflow-hidden">
             <div className="flex justify-between items-center p-4 border-b border-gray-700">
               <span className="text-gray-300 font-medium">package.json</span>
@@ -281,7 +281,7 @@ function App() {
 
         {/* Troubleshooting */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Troubleshooting</h2>
+          <h2 className="text-3xl font-bold mb-8" style={{ color: theme?.textColor || '#111827' }}>Troubleshooting</h2>
           <div className="space-y-6">
             {troubleshooting.map((item, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm p-6">

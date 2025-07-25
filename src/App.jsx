@@ -20,7 +20,9 @@ function App() {
     secondaryColor: "#4f46e5",
     iconColor: "#e2e8f0",
     textColor: "#f1f5f9",
-    backgroundColor: "#f8fafc"
+    backgroundColor: "#f8fafc",
+    navbarIconColor: "#e2e8f0",
+    navbarTextColor: "#111827"
   });
 
   // Load theme from localStorage on component mount
@@ -66,6 +68,21 @@ function App() {
     setTheme(prev => ({
       ...prev,
       backgroundColor
+    }));
+  };
+
+  const handleNavbarIconColorChange = (navbarIconColor) => {
+    setTheme(prev => ({
+      ...prev,
+      navbarIconColor
+    }));
+
+  };
+
+  const handleNavbarTextColorChange = (navbarTextColor) => {
+    setTheme(prev => ({
+      ...prev,
+      navbarTextColor
     }));
   };
 
@@ -121,8 +138,8 @@ function App() {
         heading="VJ UI Components"
         topdata={topData}
         bottomdata={bottomData}
-        iconColor={theme.iconColor}
-        textColor={theme.textColor}
+        iconColor={theme.navbarIconColor}
+        textColor={theme.navbarTextColor}
         position="relative"
       />
       <Routes>
@@ -143,6 +160,8 @@ function App() {
             onIconColorChange={handleIconColorChange}
             onTextColorChange={handleTextColorChange}
             onBackgroundColorChange={handleBackgroundColorChange}
+            onNavbarIconColorChange={handleNavbarIconColorChange}
+            onNavbarTextColorChange={handleNavbarTextColorChange}
           />
         } />
         
