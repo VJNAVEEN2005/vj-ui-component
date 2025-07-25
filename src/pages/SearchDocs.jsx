@@ -270,7 +270,7 @@ const AdvancedSearchExample = () => {
                 }`}
                 style={{ 
                   backgroundColor: activeTab === tab.id ? theme?.primaryColor || '#6366f1' : undefined,
-                  color: activeTab === tab.id ? '#ffffff' : secondaryTextColor
+                  color: activeTab === tab.id ? '#ffffff' : "#4b5563"
                 }}
               >
                 {tab.icon}
