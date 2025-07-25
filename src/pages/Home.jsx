@@ -252,24 +252,7 @@ function App() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-          <h2 className="text-4xl font-bold mb-6">Ready to Build Something Amazing?</h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Join developers who are already building beautiful applications with VJ UI Components.
-          </p>
-          
-          <div className="flex justify-center gap-6">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg flex items-center gap-3 hover:bg-gray-50 transition-colors shadow-lg">
-              <IconDownload size={24} />
-              Install Now
-            </button>
-            <button className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center gap-3 hover:bg-white/30 transition-colors">
-              <IconBrandGithub size={24} />
-              View on GitHub
-            </button>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
