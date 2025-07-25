@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Navbar} from 'vj-ui-components'
-import { IconHome2, IconSettings2, IconBook, IconComponents, IconDownload, IconCode, IconPalette, IconSearch } from '@tabler/icons-react'
+import { IconHome2, IconSettings2, IconBook, IconComponents, IconDownload, IconCode, IconPalette, IconSearch, IconWindowMaximize } from '@tabler/icons-react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Documentation from './pages/Documentation'
 import NavbarDocs from './pages/NavbarDocs'
 import InputDocs from './pages/InputDocs'
 import SearchDocs from './pages/SearchDocs'
+import ModalDocs from './pages/ModalDocs'
 import Installation from './pages/Installation'
 import Examples from './pages/Examples'
 import Settings from './pages/Settings'
@@ -112,6 +113,11 @@ function App() {
           icon: <IconSearch />,
           text: "Search",
           path: "/docs/search"
+        },
+        {
+          icon: <IconWindowMaximize />,
+          text: "Modal",
+          path: "/docs/modal"
         }
       ]
     },
@@ -154,6 +160,7 @@ function App() {
         <Route path="/docs/navbar" element={<NavbarDocs theme={theme} />} />
         <Route path="/docs/input" element={<InputDocs theme={theme} />} />
         <Route path="/docs/search" element={<SearchDocs theme={theme} />} />
+        <Route path="/docs/modal" element={<ModalDocs theme={theme} />} />
         <Route path="/installation" element={<Installation theme={theme} />} />
         <Route path="/examples" element={<Examples theme={theme} />} />
         <Route path="/settings" element={
