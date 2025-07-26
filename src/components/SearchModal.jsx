@@ -65,6 +65,30 @@ const SearchModal = ({ isOpen, onClose, theme }) => {
       keywords: ['modal', 'dialog', 'popup', 'overlay', 'window']
     },
     {
+      title: 'Skeleton Component',
+      description: 'Loading placeholders that mimic content layout',
+      path: '/docs/skeleton',
+      icon: <IconComponents size={20} />,
+      category: 'Components',
+      keywords: ['skeleton', 'loading', 'placeholder', 'shimmer', 'loader', 'content']
+    },
+    {
+      title: 'Tags Component',
+      description: 'Interactive tag components for categorizing content',
+      path: '/docs/tags',
+      icon: <IconPalette size={20} />,
+      category: 'Components',
+      keywords: ['tags', 'labels', 'chips', 'badges', 'categorize', 'filter', 'organize']
+    },
+    {
+      title: 'Loader Component',
+      description: 'Customizable loading indicators with multiple variants',
+      path: '/docs/loader',
+      icon: <IconCode size={20} />,
+      category: 'Components',
+      keywords: ['loader', 'loading', 'spinner', 'progress', 'circular', 'linear', 'dots', 'indicator']
+    },
+    {
       title: 'Installation',
       description: 'Step-by-step installation and setup guide',
       path: '/installation',
