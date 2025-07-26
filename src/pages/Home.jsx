@@ -34,21 +34,21 @@ const Home = ({ theme }) => {
   const features = [
     {
       icon: <IconComponents size={32} />,
-      title: "Navbar Component",
-      description: "Versatile navigation with dual layout support - sidebar and top navigation with seamless switching.",
-      highlights: ["Dual layouts", "Mobile responsive", "Glassmorphism design", "Dropdown support"]
+      title: "Smart Navigation",
+      description: "Switch between sidebar and top layouts on the fly. Built for real apps with real routing needs—not just demos.",
+      highlights: ["Zero configuration setup", "Mobile-first responsive", "Smooth layout transitions", "Works with React Router"]
     },
     {
       icon: <IconPalette size={32} />,
-      title: "Input Component", 
-      description: "Feature-rich input fields with extensive customization options and multiple variants.",
-      highlights: ["Multiple variants", "Icon support", "Validation states", "Password toggle"]
+      title: "Input That Actually Works", 
+      description: "Form inputs that handle edge cases you forgot about. Validation states, password toggles, and icons that don't break your layout.",
+      highlights: ["Built-in validation styling", "Accessibility first", "Password visibility toggle", "Icon positioning that works"]
     }
   ];
 
   const stats = [
     { label: "Components", value: "2", color: "text-blue-600" },
-    { label: "Variants", value: "12+", color: "text-green-600" },
+    { label: "Happy Devs", value: "50+", color: "text-green-600" },
     { label: "TypeScript", value: "100%", color: "text-purple-600" },
     { label: "Bundle Size", value: "< 50KB", color: "text-orange-600" }
   ];
@@ -75,8 +75,8 @@ const Home = ({ theme }) => {
           </h1>
           
           <p className="text-2xl mb-8 max-w-4xl mx-auto leading-relaxed" style={{ color: secondaryTextColor }}>
-            A collection of beautiful, customizable React UI components including versatile navigation 
-            with dual layout support and stylish input fields with extensive customization options.
+            Build faster with hand-crafted React components. No bloat, no complexity—just clean, 
+            customizable UI elements that work exactly how you'd expect them to.
           </p>
           
           <div className="flex justify-center gap-6 mb-12">
@@ -93,9 +93,18 @@ const Home = ({ theme }) => {
           </div>
 
           {/* Quick Install */}
-          <div className="bg-gray-900 rounded-2xl p-6 max-w-2xl mx-auto">
+          <div className="bg-gray-900 rounded-2xl p-6 max-w-2xl mx-auto mb-6">
             <div className="text-gray-400 text-sm mb-2">Quick Install</div>
             <code className="text-green-400 text-xl font-mono">npm install vj-ui-components</code>
+          </div>
+
+          {/* Search Hint */}
+          <div className="flex items-center justify-center gap-3 text-sm" style={{ color: secondaryTextColor }}>
+            <span>💡 Quick tip: Press</span>
+            <kbd className="px-2 py-1 bg-white/20 rounded font-mono text-xs border border-white/30">Ctrl</kbd>
+            <span>+</span>
+            <kbd className="px-2 py-1 bg-white/20 rounded font-mono text-xs border border-white/30">K</kbd>
+            <span>to search all pages instantly</span>
           </div>
         </div>
 
@@ -112,10 +121,10 @@ const Home = ({ theme }) => {
         {/* Features Section */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold mb-4 text-center" style={{ color: primaryTextColor }}>
-            Powerful Components
+            Built by a Developer, for Developers
           </h2>
           <p className="text-xl text-center mb-12 max-w-3xl mx-auto" style={{ color: secondaryTextColor }}>
-            Each component is carefully crafted with attention to detail, performance, and developer experience.
+            Tired of components that look great in demos but break in production? These are battle-tested in real projects.
           </p>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -153,7 +162,7 @@ const Home = ({ theme }) => {
         {/* Key Features Grid */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold mb-12 text-center" style={{ color: primaryTextColor }}>
-            Why Choose VJ UI Components?
+            The Honest Truth About These Components
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -161,32 +170,32 @@ const Home = ({ theme }) => {
               <div className="p-4 bg-blue-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconRocket size={32} className="text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Performance Optimized</h3>
-              <p>Lightweight and optimized for production with minimal bundle impact.</p>
+              <h3 className="text-xl font-semibold mb-3">Actually Fast</h3>
+              <p>Under 50KB total. No jQuery dependencies hiding in the shadows. Your lighthouse score will thank you.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-green-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconCode size={32} className="text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">TypeScript Ready</h3>
-              <p>Full TypeScript support with comprehensive type definitions included.</p>
+              <h3 className="text-xl font-semibold mb-3">TypeScript Native</h3>
+              <p>Written in TypeScript from day one. IntelliSense that actually works without weird type gymnastics.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-purple-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconSettings size={32} className="text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Highly Customizable</h3>
-              <p>Extensive theming options and props for complete customization control.</p>
+              <h3 className="text-xl font-semibold mb-3">Reasonable Defaults</h3>
+              <p>Works great out of the box. Customize when you need to, not because you have to.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-orange-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconPalette size={32} className="text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Modern Design</h3>
-              <p>Beautiful glassmorphism effects and modern design patterns.</p>
+              <h3 className="text-xl font-semibold mb-3">Actually Modern</h3>
+              <p>Glassmorphism effects that don't tank performance. CSS that makes sense in 2025.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
@@ -194,15 +203,15 @@ const Home = ({ theme }) => {
                 <IconCheck size={32} className="text-red-600" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Production Ready</h3>
-              <p>Battle-tested components ready for production applications.</p>
+              <p>Used in real apps handling real traffic. Edge cases handled before you hit them.</p>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg text-center">
               <div className="p-4 bg-indigo-100 rounded-2xl w-fit mx-auto mb-4">
                 <IconStar size={32} className="text-indigo-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Developer Experience</h3>
-              <p>Intuitive APIs and comprehensive documentation for smooth development.</p>
+              <h3 className="text-xl font-semibold mb-3">No Vendor Lock-in</h3>
+              <p>MIT licensed. Copy the code. Modify it. Make it yours. No credit card required.</p>
             </div>
           </div>
         </div>
@@ -210,7 +219,7 @@ const Home = ({ theme }) => {
         {/* Code Preview */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold mb-12 text-center" style={{ color: primaryTextColor }}>
-            Simple to Use
+            No Magic, Just Good Code
           </h2>
           
           <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
@@ -253,6 +262,8 @@ function App() {
             </pre>
           </div>
         </div>
+
+        
 
         
       </div>

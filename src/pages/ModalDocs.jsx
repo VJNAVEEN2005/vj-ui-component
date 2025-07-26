@@ -20,7 +20,12 @@ const ModalDocs = ({ theme }) => {
     fullscreen: false,
     glassmorphism: false,
     settings: false,
-    sizes: false,
+    sizeXs: false,
+    sizeSm: false,
+    sizeMd: false,
+    sizeLg: false,
+    sizeXl: false,
+    sizeFull: false,
     animations: false
   });
 
@@ -400,18 +405,18 @@ const BasicModalExample = () => {
               <div className="space-y-6 mb-6">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {[
-                    { size: 'xs', label: 'Extra Small', width: '300px' },
-                    { size: 'sm', label: 'Small', width: '400px' },
-                    { size: 'md', label: 'Medium', width: '600px' },
-                    { size: 'lg', label: 'Large', width: '800px' },
-                    { size: 'xl', label: 'Extra Large', width: '1200px' },
-                    { size: 'full', label: 'Full Screen', width: '100%' }
+                    { size: 'xs', label: 'Extra Small', width: '300px', modalKey: 'sizeXs' },
+                    { size: 'sm', label: 'Small', width: '400px', modalKey: 'sizeSm' },
+                    { size: 'md', label: 'Medium', width: '600px', modalKey: 'sizeMd' },
+                    { size: 'lg', label: 'Large', width: '800px', modalKey: 'sizeLg' },
+                    { size: 'xl', label: 'Extra Large', width: '1200px', modalKey: 'sizeXl' },
+                    { size: 'full', label: 'Full Screen', width: '100%', modalKey: 'sizeFull' }
                   ].map((sizeOption) => (
                     <div key={sizeOption.size} className="p-4 bg-gray-50 rounded-lg text-center">
                       <h4 className="font-semibold mb-1 text-gray-900">{sizeOption.label}</h4>
                       <p className="text-xs mb-3 text-gray-600">{sizeOption.width}</p>
                       <button
-                        onClick={() => toggleModal('sizes')}
+                        onClick={() => toggleModal(sizeOption.modalKey)}
                         className="px-3 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
                       >
                         Open {sizeOption.size.toUpperCase()}
@@ -839,6 +844,154 @@ const BasicModalExample = () => {
                 <option>French</option>
                 <option>German</option>
               </select>
+            </div>
+          </div>
+        </Modal>
+
+        {/* Size Modals */}
+        
+        {/* Extra Small Modal */}
+        <Modal
+          isOpen={modals.sizeXs}
+          onClose={() => toggleModal('sizeXs')}
+          title="Extra Small Modal"
+          size="xs"
+          variant="default"
+        >
+          <div>
+            <p className="mb-4">This is an extra small modal (xs) with a width of approximately 300px.</p>
+            <p className="text-gray-600">Perfect for simple confirmations or small forms.</p>
+          </div>
+        </Modal>
+
+        {/* Small Modal */}
+        <Modal
+          isOpen={modals.sizeSm}
+          onClose={() => toggleModal('sizeSm')}
+          title="Small Modal"
+          size="sm"
+          variant="default"
+        >
+          <div>
+            <p className="mb-4">This is a small modal (sm) with a width of approximately 400px.</p>
+            <p className="text-gray-600">Good for simple forms or compact content displays.</p>
+          </div>
+        </Modal>
+
+        {/* Medium Modal */}
+        <Modal
+          isOpen={modals.sizeMd}
+          onClose={() => toggleModal('sizeMd')}
+          title="Medium Modal"
+          size="md"
+          variant="default"
+        >
+          <div>
+            <p className="mb-4">This is a medium modal (md) with a width of approximately 600px.</p>
+            <p className="text-gray-600">The default size - perfect for most use cases including forms and content displays.</p>
+          </div>
+        </Modal>
+
+        {/* Large Modal */}
+        <Modal
+          isOpen={modals.sizeLg}
+          onClose={() => toggleModal('sizeLg')}
+          title="Large Modal"
+          size="lg"
+          variant="default"
+        >
+          <div>
+            <p className="mb-4">This is a large modal (lg) with a width of approximately 800px.</p>
+            <p className="text-gray-600">Great for detailed forms, data tables, or rich content that needs more space.</p>
+            <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+              <h4 className="font-semibold mb-2">More Content Space</h4>
+              <p className="text-sm text-gray-600">Large modals provide ample space for complex layouts and multiple sections of content.</p>
+            </div>
+          </div>
+        </Modal>
+
+        {/* Extra Large Modal */}
+        <Modal
+          isOpen={modals.sizeXl}
+          onClose={() => toggleModal('sizeXl')}
+          title="Extra Large Modal"
+          size="xl"
+          variant="default"
+        >
+          <div>
+            <p className="mb-4">This is an extra large modal (xl) with a width of approximately 1200px.</p>
+            <p className="text-gray-600">Ideal for complex dashboards, detailed data views, or multi-column layouts.</p>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="p-4 bg-blue-50 rounded-lg">
+                <h4 className="font-semibold mb-2 text-blue-900">Wide Content</h4>
+                <p className="text-sm text-blue-700">Extra large modals can accommodate side-by-side content layouts.</p>
+              </div>
+              <div className="p-4 bg-green-50 rounded-lg">
+                <h4 className="font-semibold mb-2 text-green-900">Complex Forms</h4>
+                <p className="text-sm text-green-700">Perfect for multi-step forms or detailed configuration panels.</p>
+              </div>
+            </div>
+          </div>
+        </Modal>
+
+        {/* Full Screen Modal */}
+        <Modal
+          isOpen={modals.sizeFull}
+          onClose={() => toggleModal('sizeFull')}
+          title="Full Screen Modal"
+          size="full"
+          variant="default"
+        >
+          <div>
+            <p className="mb-6">This is a full screen modal that takes up the entire viewport.</p>
+            <p className="mb-6 text-gray-600">Full screen modals are perfect for immersive experiences, document viewers, or any content that benefits from maximum screen real estate.</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              {[1, 2, 3, 4, 5, 6].map(i => (
+                <div key={i} className="p-4 bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg">
+                  <h4 className="font-semibold mb-2">Content Block {i}</h4>
+                  <p className="text-sm text-gray-600">Full screen modals can display large amounts of content in an organized manner.</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+              <p className="text-yellow-800">💡 Tip: Full screen modals are great for mobile-first applications where you want to provide a native app-like experience.</p>
+            </div>
+          </div>
+        </Modal>
+
+        {/* Animations Modal */}
+        <Modal
+          isOpen={modals.animations}
+          onClose={() => toggleModal('animations')}
+          title="Animation Demo"
+          size="md"
+          variant="default"
+          enterAnimation="fadeScale"
+          animationDuration={400}
+        >
+          <div>
+            <p className="mb-4">This modal demonstrates custom animations with fadeScale effect and 400ms duration.</p>
+            <p className="text-gray-600 mb-6">You can customize both the animation type and duration to match your design needs.</p>
+            
+            <div className="space-y-4">
+              <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
+                <h4 className="font-semibold mb-2">Available Animations:</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• fade - Simple fade in/out</li>
+                  <li>• fadeScale - Fade with scaling effect</li>
+                  <li>• slideUp - Slide from bottom</li>
+                  <li>• slideDown - Slide from top</li>
+                  <li>• slideLeft - Slide from right</li>
+                  <li>• slideRight - Slide from left</li>
+                </ul>
+              </div>
+              
+              <div className="p-4 bg-blue-50 rounded-lg">
+                <h4 className="font-semibold mb-2 text-blue-900">Current Animation</h4>
+                <p className="text-sm text-blue-700">This modal is using <code className="bg-blue-100 px-1 rounded">fadeScale</code> animation with <code className="bg-blue-100 px-1 rounded">400ms</code> duration.</p>
+              </div>
             </div>
           </div>
         </Modal>

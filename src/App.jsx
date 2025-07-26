@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Navbar} from 'vj-ui-components'
-import { IconHome2, IconSettings2, IconBook, IconComponents, IconDownload, IconCode, IconPalette, IconSearch, IconWindowMaximize } from '@tabler/icons-react'
+import { IconHome2, IconSettings2, IconBook, IconComponents, IconDownload, IconCode, IconPalette, IconSearch, IconWindowMaximize, IconLoader, IconTag, IconPlayerPlay } from '@tabler/icons-react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Documentation from './pages/Documentation'
@@ -11,9 +11,14 @@ import NavbarDocs from './pages/NavbarDocs'
 import InputDocs from './pages/InputDocs'
 import SearchDocs from './pages/SearchDocs'
 import ModalDocs from './pages/ModalDocs'
+import SkeletonDocs from './pages/SkeletonDocs'
+import TagsDocs from './pages/TagsDocs'
+import LoaderDocs from './pages/LoaderDocs'
 import Installation from './pages/Installation'
 import Examples from './pages/Examples'
 import Settings from './pages/Settings'
+import SearchModal from './components/SearchModal'
+import FloatingSearchButton from './components/FloatingSearchButton'
 
 function App() {
   // Theme state management with proper contrast
@@ -26,6 +31,9 @@ function App() {
     navbarIconColor: "#64748b",
     navbarTextColor: "#1e293b"
   });
+
+  // Search modal state
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
 
   // Load theme from localStorage on component mount
   useEffect(() => {
@@ -43,6 +51,20 @@ function App() {
   useEffect(() => {
     localStorage.setItem('vjui-theme', JSON.stringify(theme));
   }, [theme]);
+
+  // Global keyboard shortcut for search modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Ctrl+K or Cmd+K to open search modal
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsSearchModalOpen(true);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const handleColorChange = (primary, secondary) => {
     setTheme(prev => ({
@@ -118,6 +140,21 @@ function App() {
           icon: <IconWindowMaximize />,
           text: "Modal",
           path: "/docs/modal"
+        },
+        {
+          icon: <IconLoader />,
+          text: "Skeleton",
+          path: "/docs/skeleton"
+        },
+        {
+          icon: <IconTag />,
+          text: "Tags",
+          path: "/docs/tags"
+        },
+        {
+          icon: <IconPlayerPlay />,
+          text: "Loader",
+          path: "/docs/loader"
         }
       ]
     },
@@ -161,6 +198,9 @@ function App() {
         <Route path="/docs/input" element={<InputDocs theme={theme} />} />
         <Route path="/docs/search" element={<SearchDocs theme={theme} />} />
         <Route path="/docs/modal" element={<ModalDocs theme={theme} />} />
+        <Route path="/docs/skeleton" element={<SkeletonDocs theme={theme} />} />
+        <Route path="/docs/tags" element={<TagsDocs theme={theme} />} />
+        <Route path="/docs/loader" element={<LoaderDocs theme={theme} />} />
         <Route path="/installation" element={<Installation theme={theme} />} />
         <Route path="/examples" element={<Examples theme={theme} />} />
         <Route path="/settings" element={
@@ -181,6 +221,19 @@ function App() {
         
         {/* Add more routes as needed */}
       </Routes>
+
+      {/* Floating Search Button */}
+      <FloatingSearchButton
+        onClick={() => setIsSearchModalOpen(true)}
+        theme={theme}
+      />
+
+      {/* Search Modal */}
+      <SearchModal
+        isOpen={isSearchModalOpen}
+        onClose={() => setIsSearchModalOpen(false)}
+        theme={theme}
+      />
     </div>
   )
 }
