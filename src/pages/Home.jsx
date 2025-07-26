@@ -47,10 +47,10 @@ const Home = ({ theme }) => {
   ];
 
   const stats = [
-    { label: "Components", value: "2", color: "text-blue-600" },
-    { label: "Happy Devs", value: "50+", color: "text-green-600" },
-    { label: "TypeScript", value: "100%", color: "text-purple-600" },
-    { label: "Bundle Size", value: "< 50KB", color: "text-orange-600" }
+    { label: "Components", value: "7", color: "text-blue-600" },
+    { label: "Bundle Size", value: "160KB", color: "text-green-600" },
+    { label: "MIT Licensed", value: "100%", color: "text-purple-600" },
+    { label: "Performance", value: "⚡ Fast", color: "text-orange-600" }
   ];
 
   return (
@@ -61,14 +61,14 @@ const Home = ({ theme }) => {
       <div className="max-w-6xl mx-auto px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-20">
-          <div className="flex justify-center mb-8">
+          {/* <div className="flex justify-center mb-8">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full blur-xl opacity-30 animate-pulse"></div>
               <div className="relative p-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full">
                 <IconBrandReact size={64} className="text-white" />
               </div>
             </div>
-          </div>
+          </div> */}
 
           <h1 className="text-6xl font-bold mb-6" style={{ color: primaryTextColor }}>
             VJ UI Components
@@ -82,7 +82,10 @@ const Home = ({ theme }) => {
           <div className="flex justify-center gap-6 mb-12">
             <button
             onClick={() => window.location.href = 'https://www.npmjs.com/package/vj-ui-components'}
-            className="bg-gradient-to-r cursor-pointer from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center gap-3 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+            className=" cursor-pointer text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center gap-3 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105" style={{
+              backgroundColor: theme.primaryColor || '#3b82f6',
+              color: theme.navbarTextColor
+            }}>
               <IconDownload size={24} />
               Get Started
             </button>
